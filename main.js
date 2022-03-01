@@ -1,10 +1,10 @@
 import got from 'got';
 
 async function main() {
-    const response = await got('https://httpbin.org/get');
-    const data = response.body;
+    const resp = got(`https://api.github.com/users/katy4599/repos`)
+    const data = await resp.json()
 
-    console.log(data)
+    console.log(data);
 }
 
 main();
